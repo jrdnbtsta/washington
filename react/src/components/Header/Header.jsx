@@ -43,6 +43,14 @@ class Header extends React.Component {
         <FlatButton
           icon={<FontIcon className="material-icons">menu</FontIcon>}
           onClick={this.handleToggle}
+          style={
+            {
+              position: 'absolute',
+              top: '50%',
+              right: '0px',
+              transform: 'translate(0%, -50%)'
+            }
+          }
         />
 
         <Drawer openSecondary={true} open={this.state.open}>
