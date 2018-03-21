@@ -1,0 +1,52 @@
+/* GET STYLES FROM OTHER CSS FILES */
+/* .center {
+  composes: center from '../../App.css';
+} */
+
+.nav {
+  position: absolute;
+  top: 0px;
+  height: inherit;
+  width: 75px;
+  background-color: #001c29;
+  box-shadow: 2px 2px 2px 2px rgba(211, 211, 211, 0.8);
+  z-index: 1;
+  overflow-y: auto;
+}
+
+.nav li {
+  width: inherit;
+  display: inline-block;
+}
+
+.nav_ul {
+  width: inherit;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.link {
+  width: inherit;
+  font-size: .8em;
+  color: black;
+  text-transform: uppercase;
+}
+
+.link > button {
+  width: inherit;
+  height: 60px;
+  background-color: #001c29;  
+}
+
+.selectedTab > button {
+  background-color: #6AC3EB;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: #F47474;
+}
+

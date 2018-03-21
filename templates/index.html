@@ -1,0 +1,22 @@
+{% load render_bundle from webpack_loader %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>News Stand</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'washington/global/media/mpulse_logo_favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'washington/global/stylesheets/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'washington/global/stylesheets/main.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root">
+      <div class="index-loading-spinner">
+        <span class="fa fa-circle-o-notch fa-spin"></span>
+      </div>
+    </div>
+      {% render_bundle 'main' %}
+  </body>
+</html>
