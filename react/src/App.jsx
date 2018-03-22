@@ -10,6 +10,7 @@ import NotFound from './routes/NotFound/NotFound';
 import ImagePage from './routes/ImagePage/ImagePage';
 import LinksPage from './routes/LinksPage/LinksPage';
 import ProgramBuilder from './routes/ProgramBuilder/ProgramBuilder';
+import Home from './routes/Home';
 import { fetchImages } from './actions/imageAction/imageAction';
 
 import styles from './App.css';
@@ -24,10 +25,10 @@ class App extends Component {
             {/* <Navbar /> */}
             <div id={styles.main}>
               <Switch>
-                <Route exact={true} path="/" component={ProgramBuilder} />
-                <Route path="/ProgramBuilder" component={ProgramBuilder} />              
+                <Route path="/" component={Home} />
+                {/* <Route path="/ProgramBuilder" component={ProgramBuilder} />              
                 <Route path="/ImagePage" component={ImagePage} />
-                <Route path="/LinksPage" component={LinksPage} />
+                <Route path="/LinksPage" component={LinksPage} /> */}
                 <Route component={NotFound} />
               </Switch>
             </div>
