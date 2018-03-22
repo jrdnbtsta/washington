@@ -24,10 +24,19 @@ class Home extends React.Component {
   createCardRow(list) {
     if (!list) return [];
     return list.map(article => (
-        <Card>
+        <Card
+          style= {
+            { 
+              verticalAlign: 'top',
+              margin: '10px',
+            }
+          }
+        >
           <CardHeader
-            title="Without Avatar"
-            subtitle="Subtitle"
+            title={article.title}
+            subtitle={`By ${article.author}`}
+            avatar={article.urlToImage}
+            actAsExpander={true}
           />
           <CardActions>
             <FlatButton label="Action1" />
@@ -46,7 +55,14 @@ class Home extends React.Component {
   render() {
     return (
       <section className="route" id="home" style={ROUTE_BASE} >
-        <div>{ this.createCardRow(this.state.articles.data) }</div>
+        <div style = {
+          {
+            overflowX: 'scroll',
+            overflowY: 'hidden',
+            whiteSpace: 'nowrap'
+          }
+        }
+    >{ this.createCardRow(this.state.articles.data) }</div>
       </section>
     )
   }

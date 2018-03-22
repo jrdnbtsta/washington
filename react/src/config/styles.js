@@ -7,4 +7,5 @@ export const ROUTE_BASE = {
   width: 'calc(100% - 120px)',
   height: '100%',
   backgroundColor: 'gray',
+  overflowY: 'scroll',
 }
